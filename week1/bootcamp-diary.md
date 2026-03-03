@@ -19,6 +19,18 @@
 
 **Monetization insight:** GitHub repo is my public portfolio. Every commit is proof of work that future cofounders and investors can see.
 
+### Day 2 (LEARN — 1h) | March 4, 2026
+
+**Built/Completed:** Built a profile page from scratch with CSS styling (colors, fonts, spacing, circular image, hover effects). Practiced Inspect Element on live websites. Applied a gradient background and pushed to GitHub.
+
+**Key concept learned:** CSS targets elements three ways: by tag name (`h1`), by class (`.highlight`), or by ID (`#main`). CSS can live in three places: inside `<style>` in the head, inline on a single element, or in a separate `.css` file. Every HTML element is a box with content → padding → border → margin (the box model).
+
+**Biggest challenge:** Using Inspect Element on complex production sites — their CSS is compiled into unreadable class names and external files, making it hard to find the actual styling rules. Simpler sites are better for learning.
+
+**Tomorrow I need to:** Day 3 BUILD (4h) — Build Website 1 with Hostinger AI Builder.
+
+**Monetization insight:** Inspect Element lets you reverse-engineer any competitor's design for free. See what fonts, colors, and spacing they use, then apply it to your own sites.
+
 ---
 
 ## Appendix A — Abbreviations & Terms
@@ -123,7 +135,46 @@
 | `<ol>` + `<li>` | Numbered list | `<ol><li>First</li></ol>` |
 | `<div>` | Generic container for grouping/styling | `<div class="box">...</div>` |
 | `<strong>` | Bold text | `<strong>Important</strong>` |
+| `<span>` | Inline container (style words within text) | `<span style="color:blue">word</span>` |
 | `<style>` | CSS block (inside head) | Colors, fonts, spacing |
 | `class="name"` | Labels element for CSS targeting | `<div class="highlight">` |
 
 **Key pattern:** Most tags open and close: `<tag>content</tag>`. A few self-close: `<img>`, `<meta>`.
+
+---
+
+## Appendix F — CSS Essentials
+
+| Property | What it does | Example |
+|---|---|---|
+| `color` | Text color | `color: #1a365d;` |
+| `background-color` | Flat background color | `background-color: #f0f4f8;` |
+| `background` | Background (supports gradients) | `background: linear-gradient(to bottom, #1a365d, #3182ce);` |
+| `font-family` | Font choice | `font-family: Arial, sans-serif;` |
+| `font-size` | Text size | `font-size: 18px;` |
+| `line-height` | Space between lines of text | `line-height: 1.6;` |
+| `padding` | Space INSIDE the box | `padding: 15px;` |
+| `margin` | Space OUTSIDE the box | `margin: 20px 0;` |
+| `max-width` | Maximum element width | `max-width: 700px;` |
+| `border-bottom` | Line below an element | `border-bottom: 3px solid #3182ce;` |
+| `border-radius` | Rounded corners (50% = circle) | `border-radius: 8px;` |
+| `border-left` | Line on the left (accent bar) | `border-left: 4px solid #3182ce;` |
+| `list-style-type` | Bullet shape in lists | `list-style-type: square;` |
+| `object-fit` | How image fills its box | `object-fit: cover;` |
+| `text-decoration` | Underline, strikethrough, etc. | `text-decoration: none;` |
+
+**Selectors:**
+
+| Selector | What it targets | Example |
+|---|---|---|
+| `h1` | All elements of that tag | `h1 { color: blue; }` |
+| `.classname` | Elements with that class | `.highlight { padding: 15px; }` |
+| `#idname` | The one element with that ID | `#main { max-width: 800px; }` |
+| `a:hover` | Element in a specific state | `a:hover { text-decoration: underline; }` |
+
+**Where CSS lives (3 ways):**
+1. `<style>` in `<head>` — applies to whole page (what we use now)
+2. `style="..."` inline on one element — applies to that element only
+3. Separate `.css` file linked in head — professional approach for bigger projects
+
+**Key concept:** Every HTML element is a box: content → padding → border → margin. Padding is space inside, margin is space outside.
