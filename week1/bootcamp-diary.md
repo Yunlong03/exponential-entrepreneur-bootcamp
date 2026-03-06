@@ -31,6 +31,18 @@
 
 **Monetization insight:** Inspect Element lets you reverse-engineer any competitor's design for free. See what fonts, colors, and spacing they use, then apply it to your own sites.
 
+### Day 3 (BUILD — 4h) | March 5, 2026
+
+**Built/Completed:** Tested 3 website builders (WordPress Gutenberg, Hostinger AI Builder, Horizons). Generated Website 1 for Dragon consulting site with content brief. Defined color palette (#160D0D background, #F4EBA8 main text, #D4A843 secondary). Email capture and contact form generated from brief. Exported Horizons code for Cursor fine-tuning.
+
+**Key concept learned:** WordPress is server-side software installed on a host's server (not your computer). Gutenberg and Elementor are editors that sit on top of WordPress — they are not WordPress itself. Hostinger AI Builder is fast but locks you in with no code access. Horizons generates actual React/Tailwind code you can export and own. Professional development workflow: AI generates initial code (Horizons or v0) → Cursor for fine-tuning → GitHub for storage and version control → hosting platform deploys from GitHub. You own the code at every step and are never locked to one tool.
+
+**Biggest challenge:** WordPress editor frustration — CSS overrides from themes silently block your styling changes with no way to debug. Spent too long fighting the tool instead of shipping. Key lesson: when a tool fights you, drop it and find a better one.
+
+**Tomorrow I need to:** Import Horizons code into Cursor, push to GitHub, start fine-tuning with actual code access (Day 4 LEARN + Day 5 BUILD).
+
+**Monetization insight:** Knowing when to drop a bad tool is an entrepreneurial skill. Also: being able to spin up a quick site with Hostinger AI Builder in hours is a useful skill for future client projects when speed matters more than code ownership.
+
 ---
 
 ## Appendix A — Abbreviations & Terms
@@ -51,6 +63,13 @@
 | SEO | Search Engine Optimization | Making your site show up in Google searches |
 | dApp | Decentralized Application | An app that runs on a blockchain |
 | repo | Repository | A project folder with memory — stores files and every change ever made |
+| WordPress.org | Open-source software | Free website software you download and install on any server you control. Full ownership, full flexibility. This is what Hostinger installs on their server for you |
+| WordPress.com | Hosted platform by Automattic | Includes WordPress software but through a different, simplified interface. They handle the server. Easier but less control, charges for features that are free plugins on WordPress.org |
+| Gutenberg | WordPress native editor | Built-in block editor — stack content blocks to build pages. Free, lightweight, the default going forward |
+| Elementor | Third-party WordPress plugin | Drag-and-drop visual editor. More design options but creates plugin lock-in — your site breaks if you remove it |
+| React | JavaScript UI library | A way to build interactive user interfaces using reusable components. What Horizons and v0 generate |
+| Tailwind CSS | Utility-first CSS framework | Instead of writing CSS rules, you use shorthand classes directly in HTML like `text-gold` or `bg-dark` |
+| JSX | JavaScript + HTML combined | React's syntax — write HTML-like code inside JavaScript files (.jsx) |
 
 ---
 
@@ -178,3 +197,26 @@
 3. Separate `.css` file linked in head — professional approach for bigger projects
 
 **Key concept:** Every HTML element is a box: content → padding → border → margin. Padding is space inside, margin is space outside.
+
+---
+
+## Appendix G — React/Tailwind Project Structure (Horizons Export)
+
+| File/Folder | What it does | Touch it? |
+|---|---|---|
+| `index.html` | Entry point — mostly empty, React fills it dynamically | Rarely |
+| `package.json` | Lists all libraries your project depends on (shopping list of tools) | Rarely |
+| `package-lock.json` | Exact versions of every library installed | Never |
+| `tailwind.config.js` | Tailwind CSS configuration — custom colors, fonts, breakpoints | Sometimes |
+| `postcss.config.js` | Behind-the-scenes CSS processing tool | Never |
+| `components.json` | UI component library configuration | Never |
+| `src/` | **Your actual site code lives here** | Yes |
+| `src/App.jsx` | Main app file — connects all pages together (the front door) | Sometimes |
+| `src/main.jsx` | Startup file — boots React and loads App.jsx | Never |
+| `src/index.css` | Global styles — your color palette, fonts, base spacing | Yes |
+| `src/pages/` | Each page as a separate file (Home, Services, About, Contact) | Yes |
+| `src/components/` | Reusable pieces — navbar, footer, buttons, cards | Yes |
+| `src/hooks/` | React helper functions | Not yet |
+| `src/lib/` | Utility code and configurations | Not yet |
+
+**Key insight:** For day-to-day work, you only need to care about `src/index.css` (styling), `src/pages/` (content), and `src/components/` (shared elements).
