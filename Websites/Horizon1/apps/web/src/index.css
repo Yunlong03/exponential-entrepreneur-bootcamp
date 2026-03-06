@@ -1,0 +1,74 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+      COLOR SCHEME UPDATES:
+      Old Background (Dark Charcoal): 210 20% 12% -> Kept the same
+      Old Foreground (Neon Cream): 40 35% 93% -> New Foreground (Warmer Cream): 34 56% 89%
+      Old Primary (Gold): 46 65% 52% -> New Primary (Neon Gold): 51 100% 50%
+    */
+    --background: 210 20% 12%;
+    --foreground: 34 56% 89%;
+    --card: 210 18% 15%;
+    --card-foreground: 34 56% 89%;
+    --popover: 210 18% 15%;
+    --popover-foreground: 34 56% 89%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 210 20% 12%;
+    --secondary: 34 56% 89%;
+    --secondary-foreground: 210 20% 12%;
+    --muted: 210 15% 20%;
+    --muted-foreground: 34 30% 75%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 210 20% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 34 56% 89%;
+    --border: 51 50% 30%;
+    --input: 210 18% 18%;
+    --ring: 51 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* 
+      COLOR SCHEME UPDATES:
+      Old Background (Dark Charcoal): 210 20% 12% -> Kept the same
+      Old Foreground (Neon Cream): 40 35% 93% -> New Foreground (Warmer Cream): 34 56% 89%
+      Old Primary (Gold): 46 65% 52% -> New Primary (Neon Gold): 51 100% 50%
+    */
+    --background: 210 20% 12%;
+    --foreground: 34 56% 89%;
+    --card: 210 18% 15%;
+    --card-foreground: 34 56% 89%;
+    --popover: 210 18% 15%;
+    --popover-foreground: 34 56% 89%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 210 20% 12%;
+    --secondary: 34 56% 89%;
+    --secondary-foreground: 210 20% 12%;
+    --muted: 210 15% 20%;
+    --muted-foreground: 34 30% 75%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 210 20% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 34 56% 89%;
+    --border: 51 50% 30%;
+    --input: 210 18% 18%;
+    --ring: 51 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
