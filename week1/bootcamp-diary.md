@@ -43,6 +43,42 @@
 
 **Monetization insight:** Knowing when to drop a bad tool is an entrepreneurial skill. Also: being able to spin up a quick site with Hostinger AI Builder in hours is a useful skill for future client projects when speed matters more than code ownership.
 
+### Day 4 (LEARN — 1h) | March 6, 2026
+
+**Built/Completed:** Imported Horizons code into Cursor and pushed to GitHub. Learned JavaScript fundamentals in browser console (variables, functions, if/else, loops). Read and decoded actual React/JSX code from Website 1 — homepage structure, contact page email capture logic, and lead magnet display.
+
+**Key concept learned:** React pages are JavaScript functions that return HTML-like code (JSX). Tailwind CSS replaces traditional CSS rules with shorthand classes applied directly on elements (e.g., `text-4xl font-bold mb-6`). `useState` stores data that can change (like form inputs), and conditional rendering (`? :`) shows different content based on state. Helmet controls the invisible `<head>` section for SEO — page title and meta description that Google displays in search results.
+
+**Biggest challenge:** Understanding the difference between the logic code (handleLeadSubmit function that processes the email) and the display code (JSX that shows the form or thank you message). They work together but live in different parts of the same file.
+
+**Tomorrow I need to:** Day 5 BUILD (4h) — Git workflow practice, polish Website 1, review and document architecture, week review.
+
+**Monetization insight:** The AI-generated code already includes a full email capture system with database storage (PocketBase), success/error handling, and a professional lead magnet flow. Understanding this code means I can customize and replicate it for future projects.
+
+### Day 5 (BUILD — 4h) | March 8, 2026
+
+**Built/Completed:** Practiced Git branching workflow with real code changes. Installed Node.js. Ran local dev server (`npm run dev`) and previewed Website 1 in browser and on phone. Created `.gitignore` to exclude `node_modules`. Wrote and pushed README documenting project architecture. Week 1 complete.
+
+**Key concept learned:** The pro solo workflow: branch → edit in Cursor → Cmd+S → `npm run dev` to preview → commit → merge to main → push. Critical rule: always save files (Cmd+S) before `git add` — unsaved changes are invisible to Git and will be lost when switching branches. Always create `.gitignore` before first `npm install` to avoid tracking thousands of library files. One `.gitignore` per repo, one `npm install` per project. Also: `package.json` is the blueprint (what libraries are needed), `node_modules` is the result (the actual downloaded libraries). Never commit `node_modules` — anyone can regenerate it with `npm install`.
+
+**Biggest challenge:** `node_modules` (455 packages) got tracked by Git and overwhelmed Cursor. Fixed with `.gitignore` and `git rm --cached`. Also lost code changes when switching branches because file wasn't saved in Cursor before committing — Git only sees saved files. Lesson: set up `.gitignore` first, install dependencies second. Always Cmd+S before git add.
+
+**Tomorrow I need to:** Start Week 2 — try v0 + Cursor combo for Website 2, deepen CSS/JS/Tailwind understanding, start Python.
+
+**Monetization insight:** Live website on phone in minutes with `npm run dev`. This workflow lets you demo to a potential client or investor from your phone on the spot — no deployment needed.
+
+---
+
+### Week 1 — Review
+
+**Skills acquired:**
+Terminal navigation and file management · Cursor IDE (Composer, Cmd+K, extensions) · Git workflow (add, commit, push, branching, merging, .gitignore) · GitHub (SSH, repo creation, pushing code) · HTML from scratch (structure, tags, semantic markup) · CSS fundamentals (selectors, box model, gradients, hover effects) · Inspect Element for reverse-engineering designs · JavaScript basics (variables, functions, if/else, console) · Reading React/JSX code (components, useState, conditional rendering) · Tailwind CSS (utility classes, responsive prefixes) · Tested 3 website builders (WordPress, Hostinger AI Builder, Horizons) · Local dev server (Node.js, npm install, npm run dev) · Mobile testing via network URL · Project documentation (README)
+
+**Gaps for Week 2:**
+JS/Tailwind/React understanding still surface level — need more hands-on practice · Haven't tried v0 + Cursor combo yet (planned for Website 2) · No experience with Python yet (scheduled for Week 2 Day 1) · Website 1 content not finalized (colors, images, text still placeholder) · Domain not connected, PocketBase not wired up · SEO only conceptual — haven't implemented beyond what AI generated
+
+**Key Week 1 Insight:** As of March 2026, AI code generation tools mean a solo founder doesn't need to code from scratch. The real skill is directing AI tools effectively, reading the output, and fixing issues in the code. Tested three approaches: platform builders (fast but locked in), WordPress (powerful but frustrating), and code generators (Horizons → Cursor → GitHub — full ownership, full flexibility). Code generators are the proper way for any serious project. Platform builders are useful only when you need a site up the same day for a pitch. Drop tools that fight you.
+
 ---
 
 ## Appendix A — Abbreviations & Terms
@@ -70,6 +106,17 @@
 | React | JavaScript UI library | A way to build interactive user interfaces using reusable components. What Horizons and v0 generate |
 | Tailwind CSS | Utility-first CSS framework | Instead of writing CSS rules, you use shorthand classes directly in HTML like `text-gold` or `bg-dark` |
 | JSX | JavaScript + HTML combined | React's syntax — write HTML-like code inside JavaScript files (.jsx) |
+| PocketBase | Lightweight backend database | Stores data like captured emails. Used by Horizons for form submissions |
+| useState | React state hook | Creates a variable that React watches — when it changes, the page updates automatically |
+| Helmet | React SEO tool | Controls the invisible `<head>` section — sets page title and meta description for Google |
+| Node.js | JavaScript runtime | Lets you run JavaScript outside the browser. Required for React development |
+| npm | Node Package Manager | Downloads and manages JavaScript libraries. Comes with Node.js |
+| JSON | JavaScript Object Notation | Universal format for structured data (key-value pairs). Used everywhere: config files, APIs, blockchain |
+| localhost | Your own computer's address | Always points back to the machine you're on. Used for local development |
+| Port | Numbered "room" on a computer | Different apps use different ports (e.g., :3000, :5173) so they don't conflict |
+| .gitignore | Git exclusion file | Tells Git which files/folders to skip (like node_modules). One per repo, created once |
+| Vite | Dev server and build tool | Fast local server for React projects. Auto-refreshes browser when you save code |
+| Hero section | First visual block on a page | The large banner area visitors see first — headline, tagline, call-to-action. Named because it's the "star" of the page |
 
 ---
 
