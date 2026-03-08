@@ -39,7 +39,7 @@ const HomePage = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Connect Your European Business with China's Best{' '}
+                Connect Your Business with China's Best{' '}
                 <span className="text-primary">On-the-Ground Experts</span>
               </h1>
               <p className="text-xl sm:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
