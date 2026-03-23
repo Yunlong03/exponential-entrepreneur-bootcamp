@@ -1,0 +1,4 @@
+HaiRobotics,Robotics,280,Shenzhen
+MagicStore,AI,190,Hangzhou
+UBTech Robotics,Robotics,1400,Shenzhen
+Fourier Intelligence,AI,300,Shanghai
